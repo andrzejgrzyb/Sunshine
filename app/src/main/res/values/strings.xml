@@ -60,8 +60,8 @@
 
     <!-- Account type (for sync-adapter authenticator) -->
     <!-- SyncAdapter related -->
-    <string name="sync_account_type">sunshine.example.com</string>
-    <string name="content_authority">com.example.andrzej.sunshine.app</string>
+    <string name="sync_account_type">sunshine.andrzej.grzyb.com</string>
+    <string name="content_authority">pl.grzyb.andrzej.sunshine.app</string>
 
     <!-- Notification Format -->
     <string name="format_notification">

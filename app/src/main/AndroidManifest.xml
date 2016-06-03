@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.andrzej.sunshine.app" >
+    package="pl.grzyb.andrzej.sunshine.app" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Permissions required by the sync adapter -->
@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="pl.grzyb.andrzej.sunshine.app.MainActivity"
             android:theme="@style/ForecastTheme"
             android:label="@string/app_name" >
             <intent-filter>
@@ -28,21 +28,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity"
+            android:name="pl.grzyb.andrzej.sunshine.app.DetailActivity"
             android:label="@string/title_activity_detail"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="pl.grzyb.andrzej.sunshine.app.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.andrzej.sunshine.app.MainActivity" />
+                android:value="pl.grzyb.andrzej.sunshine.app.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name="pl.grzyb.andrzej.sunshine.app.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="pl.grzyb.andrzej.sunshine.app.MainActivity"
             android:theme="@style/SettingsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.andrzej.sunshine.app.MainActivity"
+                android:value="pl.grzyb.andrzej.sunshine.app.MainActivity"
 
                 />
         </activity>
@@ -50,7 +50,7 @@
         <!--          ADDED WITH SYNC ADAPTER  -->
         <!-- SyncAdapter's dummy authentication service -->
         <service
-            android:name=".sync.SunshineAuthenticatorService" >
+            android:name="pl.grzyb.andrzej.sunshine.app.sync.SunshineAuthenticatorService" >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -60,13 +60,13 @@
         </service>
         <provider
             android:authorities="@string/content_authority"
-            android:name=".data.WeatherProvider"
+            android:name="pl.grzyb.andrzej.sunshine.app.data.WeatherProvider"
             android:exported="false"
             android:syncable="true" />
 
         <!-- The SyncAdapter service -->
         <service
-            android:name=".sync.SunshineSyncService"
+            android:name="pl.grzyb.andrzej.sunshine.app.sync.SunshineSyncService"
             android:exported="true"
             >
             <intent-filter>
@@ -79,16 +79,16 @@
 
         <!-- Widget -->
         <receiver
-            android:name="TodayWidgetProvider"
+            android:name="pl.grzyb.andrzej.sunshine.app.TodayWidgetProvider"
             android:label="@string/title_widget_today" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.andrzej.sunshine.app.ACTION_DATA_UPDATED" />
+                <action android:name="pl.grzyb.andrzej.sunshine.app.ACTION_DATA_UPDATED" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/widget_info_today" />
         </receiver>
-        <service android:name=".TodayWidgetIntentService" />
+        <service android:name="pl.grzyb.andrzej.sunshine.app.TodayWidgetIntentService" />
     </application>
 
 

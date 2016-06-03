@@ -1,9 +1,0 @@
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/weather_detail_container"
-    android:name="com.example.andrzej.sunshine.app.DetailActivityFragment"
-    tools:layout="@layout/fragment_detail"
-    android:layout_width="match_parent"
-    tools:context="com.example.andrzej.sunshine.app.DetailActivity"
-    android:layout_height="match_parent" />
