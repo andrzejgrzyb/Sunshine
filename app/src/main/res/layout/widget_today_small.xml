@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:id="@+id/widget"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@color/sunshine_light_blue">
+        <!-- Layout -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/widget_icon"
+            android:layout_weight="1"
+            android:src="@drawable/art_storm" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/widget_temperature"
+            android:text="99\u00B0"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            tools:text="48" />
+    </LinearLayout>
+
+</FrameLayout>
+
