@@ -30,7 +30,7 @@ public class DetailFragment extends Fragment  implements LoaderManager.LoaderCal
 
     private static final String LOG_TAG = DetailFragment.class.getSimpleName();
     static final String DETAIL_URI = "URI";
-    private static final String FORECAST_SHARE_HASHTAG = " #SunshineApp ale niezależnie od pogody: http://czegoszukasz.org";
+    private static final String FORECAST_SHARE_HASHTAG = " #SunshineApp";
 
     private ShareActionProvider mShareActionProvider;
 
@@ -194,9 +194,9 @@ public class DetailFragment extends Fragment  implements LoaderManager.LoaderCal
         // For share intent only
         mForecastStr = String.format("%s - %s - %s/%s", dateText, descText, highText, lowText);
         // If onCreateOptionsMenu has already happened, we need to update the share intent now.
-        if (mShareActionProvider != null) {
+       /* if (mShareActionProvider != null) {
             mShareActionProvider.setShareIntent(createShareForecastIntent());
-        }
+        }*/
 
     }
 

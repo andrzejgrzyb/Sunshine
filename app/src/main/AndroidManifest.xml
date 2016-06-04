@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.grzyb.andrzej.sunshine.app" >
+    package="pl.grzyb.andrzej.sunshine.app"
+    android:versionCode="2"
+    android:versionName="1.01"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Permissions required by the sync adapter -->
